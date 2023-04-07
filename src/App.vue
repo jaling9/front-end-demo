@@ -89,50 +89,50 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive } from "vue";
 
 const value = ref([
-  { name: 'row' },
-  { name: 'row-reverse' },
-  { name: 'column' },
-  { name: 'column-reverse' },
+  { name: "row" },
+  { name: "row-reverse" },
+  { name: "column" },
+  { name: "column-reverse" },
 ]);
 const value2 = ref([
-  { name: 'flex-start' },
-  { name: 'flex-end' },
-  { name: 'center' },
-  { name: 'space-between' },
-  { name: 'space-around' },
+  { name: "flex-start" },
+  { name: "flex-end" },
+  { name: "center" },
+  { name: "space-between" },
+  { name: "space-around" },
 ]);
 const value3 = ref([
-  { name: 'stretch' },
-  { name: 'flex-start' },
-  { name: 'flex-end' },
-  { name: 'center' },
-  { name: 'baseline' },
+  { name: "stretch" },
+  { name: "flex-start" },
+  { name: "flex-end" },
+  { name: "center" },
+  { name: "baseline" },
 ]);
 const value4 = ref([
-  { name: 'nowrap' },
-  { name: 'wrap' },
-  { name: 'wrap-reverse' },
+  { name: "nowrap" },
+  { name: "wrap" },
+  { name: "wrap-reverse" },
 ]);
 const value5 = ref([
-  { name: 'stretch' },
-  { name: 'flex-start' },
-  { name: 'flex-end' },
-  { name: 'center' },
-  { name: 'space-between' },
-  { name: 'space-around' },
+  { name: "stretch" },
+  { name: "flex-start" },
+  { name: "flex-end" },
+  { name: "center" },
+  { name: "space-between" },
+  { name: "space-around" },
 ]);
 
-const direction = ref('row'); // 这里要写空字符串
-const content = ref('');
-const alignItems = ref('');
-const flexWrap = ref('wrap');
-const alignContent = ref('');
+const direction = ref("row"); // 这里要写空字符串
+const content = ref("");
+const alignItems = ref("");
+const flexWrap = ref("wrap");
+const alignContent = ref("");
 
-console.log('direction', direction);
-console.log('direction.name', direction.name);
+console.log("direction", direction);
+console.log("direction.name", direction.name);
 </script>
 
 <style>
@@ -146,7 +146,7 @@ console.log('direction.name', direction.name);
 .flex-item {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   width: 200px;
-  height: 200px;
+  height: 300px;
   margin: 10px;
   /* flex-shrink: 1;
   flex-grow: 1;
@@ -204,3 +204,35 @@ p {
   font-size: 12px;
 } */
 </style>
+
+<!-- 
+<template>
+  <div id="app">
+    <GridLayout>
+      <GridItem v-for="i in 6" :key="i" :title="'Item ' + i" :content="'This is item ' + i" />
+    </GridLayout>
+  </div>
+</template>
+
+<script>
+import GridLayout from './components/GridLayout.vue'
+import GridItem from './components/GridItem.vue'
+
+export default {
+  components: {
+    GridLayout,
+    GridItem
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style> -->
